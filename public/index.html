@@ -26,6 +26,7 @@
           });
         },
         handleCommentSubmit: function (comment) {
+          this.setState({data: this.state.data.concat([comment])});
           $.ajax({
             url: this.props.url,
             dataType: 'json',
